@@ -35,6 +35,6 @@ USER appuser
 
 # Copy the source code into the container.
 COPY . .
-
+EXPOSE 8080
 # Run the application.
 CMD ["fastapi", "run", "main.py"]
