@@ -67,16 +67,14 @@ async def get_hostname():
                     animation: rainbow-text 5s infinite ease-in-out;
                     margin: 0;
                 }}
-        
-                h1.v2 {{
-                    font-size: 60px;
-                    animation: rainbow-text 5s infinite ease-in-out;
-                }}
             </style>
         </head>
         <body>
             <h1>{socket.gethostname()}</h1>
-            <h1 class="v2">v2</h1>
+            <p></p>
+            <p></p>
+            <p></p>
+            <h1>v2</h1>
         </body>
         </html>
     """
