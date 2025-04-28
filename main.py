@@ -1,6 +1,10 @@
 import socket
 from fastapi import FastAPI
+from pydantic import BaseModel
 from fastapi.responses import HTMLResponse
+
+class HealthCheck(BaseModel):
+    status: str = "OK"
 
 app = FastAPI()
 
@@ -79,3 +83,7 @@ async def get_hostname():
         </html>
     """
     return HTMLResponse(content=html_content, status_code=418)
+
+@app.get("/health")
+async def get_health():
+    return HealthCheck(status="OK")
