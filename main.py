@@ -91,8 +91,10 @@ async def get_health(response: Response):
     if health_checked == False:
         health_checked = True
         response.headers["Health-status"] = "OK"
-        return HealthCheck(status="OK"), 200
+        response.status_code = 200
+        return HealthCheck(status="OK")
     else:
         health_checked = False
         response.headers["Health-status"] = "DOWN"
-        return HealthCheck(status="DOWN"), 503
+        response.status_code = 503
+        return HealthCheck(status="DOWN")
