@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: xia1997x/pub:small-app-k8s-demo-${{ github_env.CURRENT_TIME }}
+          tags: xia1997x/pub:small-app-k8s-demo-${{ env.CURRENT_TIME }}
