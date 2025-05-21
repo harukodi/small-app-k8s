@@ -5,7 +5,7 @@ metadata:
   labels:
     app: small-app
 spec:
-  replicas: 10
+  replicas: 4
   revisionHistoryLimit: 5
   selector:
     matchLabels:
